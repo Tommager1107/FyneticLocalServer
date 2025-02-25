@@ -14,7 +14,6 @@
             padding: 0;
         }
 
-        /* Main content */
         .main-content {
             margin: 30px;
             padding: 30px;
@@ -42,7 +41,23 @@
             margin-bottom: 40px;
         }
 
-        /* Footer */
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .button:hover {
+                background-color: #45a049;
+            }
+
         footer {
             background-color: #1E1E1E;
             color: #888;
@@ -63,18 +78,43 @@
         <!-- Introduction -->
         <section class="section">
             <h2>Introduction</h2>
-            <p>The Fynetic Web Server is a lightweight, efficient local server that makes hosting simple and fast for developers and small projects. It’s designed with minimalism in mind, enabling you to host static content like HTML, CSS, and JavaScript files with ease on your local machine. Fynetic Web Server aims to be the simplest solution for personal development servers.</p>
+            <p>The Fynetic Web Server is a lightweight, fast, and simple local server that allows you to host static content (like HTML, CSS, and JavaScript) on your local machine. It's perfect for developers and small projects, designed for ease of use with minimal configuration.</p>
         </section>
 
         <!-- Setup -->
         <section class="section">
-            <h2>How to Set Up the Web Server</h2>
-            <p>Follow the steps below to set up the Fynetic Web Server on your local machine:</p>
+            <h2>How to Set Up the Fynetic Web Server</h2>
+            <p>Follow these steps to set up the Fynetic Web Server on your local machine:</p>
             <ol>
-                <li><strong>Download the web server files:</strong> Place the Fynetic Web Server files in an empty directory on your local machine. You can download the necessary files from our GitHub repository.</li>
-                <li><strong>Run the setup:</strong> Open the terminal and navigate to the directory where you placed the files. Run the command <code>fce setup</code> to initialize the directory structure and install the required dependencies.</li>
-                <li><strong>Start the server:</strong> Once the setup is complete, run <code>fce server</code> to start the web server. By default, the server will run on port 8080. You can change the port by using the <code>-p</code> flag, e.g., <code>fce server -p 8081</code> to run it on port 8081.</li>
+                <li><strong>Download the Installer:</strong> Download the installer by clicking the button below.</li>
+                <li><strong>Run the Installer:</strong> After downloading the installer, double-click the <code>fynetic-installer.bat</code> file to install <code>fce.exe</code> to <code>C:/fce</code>. The <code>fce.exe</code> file is the main executable that runs the server.</li>
+                <li>
+                    <strong>Set Up Web Server Files:</strong> The web server files need to be set up in the directory where you want the server to run. Open the Command Prompt, navigate to the desired directory, and run the following command: <code>fce setup</code>
+                    
+                    </br>
+                    
+                    
+                    This command will set up the necessary web server files in the directory.
+                    </br>
+                    </br>
+                </li>
+                <li>
+                    <strong>Start the Server:</strong> Once the setup is complete, start the server by running the following command in the same directory: <code>fce server -p 8080</code>
+                    <br><br>
+                    
+                   
+                    By default, the server will run on port 8080. You can change the port by using the <code>-p</code> flag (e.g., <code>fce server -p 7070</code> to run it on port 7070).
+                </li>
             </ol>
+        </section>
+
+        <!-- Download Installer -->
+        <section class="section">
+            <h2>Download Fynetic Web Server Installer</h2>
+            <p>To begin the setup process, download the installer to get <code>fce.exe</code> into <code>C:/fce</code>:</p>
+            <a href="https://github.com/Tommager1107/FyneticLocalServer/blob/main/fynetic-installer.bat" class="button" download="fynetic-installer.bat">
+                Download Installer
+            </a>
         </section>
 
         <!-- Commands -->
@@ -82,51 +122,50 @@
             <h2>Available Commands</h2>
             <div class="command">
                 <h3><code>fce</code></h3>
-                <p>This command shows the current version of the Fynetic Web Server. It’s useful to check if you’re running the latest version.</p>
+                <p>Displays the current version of the Fynetic Web Server. Useful to ensure you're using the latest version.</p>
             </div>
 
             <div class="command">
                 <h3><code>fce -u</code></h3>
-                <p>Use this command to simulate an update of the Fynetic Web Server. It will download the latest version and display a progress bar. This is useful for testing the update process.</p>
+                <p>Simulates the update process by downloading the latest version and showing a progress bar.</p>
             </div>
 
             <div class="command">
                 <h3><code>fce server</code></h3>
-                <p>This starts the web server. If you want to specify a different port, use the <code>-p</code> flag (e.g., <code>fce server -p 8081</code> to run the server on port 8081).</p>
+                <p>Starts the web server. Use the <code>-p</code> flag to specify a custom port (e.g., <code>fce server -p 8081</code>).</p>
             </div>
 
             <div class="command">
                 <h3><code>fce setup</code></h3>
-                <p>Runs the setup process, which initializes the web server’s directories and installs any dependencies.</p>
+                <p>Sets up the necessary files for the web server in the directory where the command is run. Run this command after downloading <code>fce.exe</code> to configure the server.</p>
             </div>
         </section>
 
         <!-- Configuration -->
         <section class="section">
             <h2>Server Configuration</h2>
-            <p>Fynetic Web Server comes with some basic configuration options that you can adjust based on your needs:</p>
+            <p>Fynetic Web Server comes with a few configurable options:</p>
             <ul>
-                <li><strong>Port:</strong> You can configure the port the server runs on by specifying the <code>-p</code> flag during the <code>fce server</code> command.</li>
-                <li><strong>Directory:</strong> The server serves files from the directory where it was initialized. You can customize this by modifying the setup.</li>
-                <li><strong>Log Level:</strong> You can change the logging level by modifying the config file to debug or error logging based on your needs.</li>
+                <li><strong>Port:</strong> You can configure the port for the server using the <code>-p</code> flag when running <code>fce server</code>.</li>
+                <li><strong>Directory:</strong> The server serves files from the directory where it was initialized. You can change the directory by running <code>fce setup</code> in a different location.</li>
+                <li><strong>Logging Level:</strong> You can configure the log level by modifying the config file in the server directory.</li>
             </ul>
         </section>
 
         <!-- Troubleshooting -->
         <section class="section">
             <h2>Troubleshooting</h2>
-            <p>If you encounter any issues while running the Fynetic Web Server, here are some common problems and their solutions:</p>
+            <p>If you run into issues, here are some common problems and solutions:</p>
             <ul>
-                <li><strong>Server Not Starting:</strong> Ensure that no other services are running on the same port. Try specifying a different port with the <code>-p</code> flag.</li>
-                <li><strong>Permissions Issues:</strong> If you're on a restricted system, make sure you have the necessary permissions to run commands in the directory.</li>
-                <li><strong>File Not Found:</strong> Make sure that the directory you are serving contains the files you intend to serve. Double-check the file paths.</li>
+                <li><strong>Server Not Starting:</strong> Ensure the port isn't already being used by another service. You can specify a different port using the <code>-p</code> flag.</li>
+                <li><strong>Permissions Issues:</strong> Make sure you have the necessary permissions to run commands in the directory where you're setting up the server.</li>
+                <li><strong>File Not Found:</strong> Ensure that the directory you're serving contains the correct files. Double-check the file paths to avoid errors.</li>
             </ul>
         </section>
 
     </div>
 
-    <!-- Footer -->
-  
+ 
 
 </body>
 </html>
